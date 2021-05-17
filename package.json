@@ -1,13 +1,12 @@
 {
   "name": "ng-training",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build-reactive-forms": "ng build --output-path docs/reactive-forms --base-href /ng-training/reactive-forms/",
-    "serve-reactive-forms": "ng serve --project=reactive-forms",
-    "watch": "ng build --watch --configuration development"
+    "build-gh-pages-reactive-forms": "ng build --output-path docs/reactive-forms --base-href /ng-training/reactive-forms/",
+    "serve-reactive-forms": "ng serve --project=reactive-forms"
   },
   "private": true,
   "dependencies": {

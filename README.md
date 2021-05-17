@@ -1,6 +1,6 @@
 # NgTraining
 
-Angular multi-project workspace with training projects.
+An Angular multi-project workspace with various training projects and demos.
 
 ## Reactive Forms
 
