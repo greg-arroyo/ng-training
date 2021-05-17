@@ -5,7 +5,7 @@ When you want to use a single repository and host multiple Angular apps with sep
 #### Create empty workspace
 1. Create GitHub repo and clone locally
 2. Navigate to the path directly above cloned repository
-3. Create empty Angular workspace using repository name *(suggest using repo name so workspace files are at root of repo)* - `ng new [YOUR_WORKSPACE_NAME] --createApplication="false" --minimal` *(no test content is created when using `--minimal` flag)*
+3. Create empty Angular workspace using repository name - `ng new [YOUR_WORKSPACE_NAME] --createApplication="false" --minimal` *(suggest using repo name so workspace files are at root of repo, no test content is created when using `--minimal` flag)*
 
 #### Add a project to the workspace
 1. Change into the YOUR_WORKSPACE_NAME directory
