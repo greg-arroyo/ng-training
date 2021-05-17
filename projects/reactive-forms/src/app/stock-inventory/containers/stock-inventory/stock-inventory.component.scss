@@ -1,0 +1,13 @@
+.stock-inventory {
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__price {
+    margin-top: 10px;
+    padding-top: 20px;
+    border-top: 1px solid #ccc;
+  }
+}
