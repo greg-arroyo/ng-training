@@ -1,8 +1,8 @@
-# NgTraining
+# Angular Training
 
 An Angular multi-project workspace with various training projects and demos.
 
-## Reactive Forms
+## Reactive Forms Project
 
 - Demo: <a href="https://greg-arroyo.github.io/ng-training/reactive-forms/">https://greg-arroyo.github.io/ng-training/reactive-forms/</a>
 - Componentized form groups
