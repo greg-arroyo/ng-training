@@ -5,7 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-gh-pages-directives": "ng build --output-path docs/directives --base-href /ng-training/directives/",
     "build-gh-pages-reactive-forms": "ng build --output-path docs/reactive-forms --base-href /ng-training/reactive-forms/",
+    "serve-directives": "ng serve --project=directives",
     "serve-reactive-forms": "ng serve --project=reactive-forms"
   },
   "private": true,
