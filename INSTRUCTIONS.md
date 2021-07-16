@@ -19,6 +19,7 @@ When you want to use a single repository and host multiple Angular apps with sep
 2. Select branch, use `/docs` path and Jekyl theme *(theme is required but currently doesn't affect individual apps)*
 
 #### Build and deploy app
-1. Run the project GitHub pages npm build command *(this builds and creates docs/[YOUR_APP_NAME] content that GitHub pages will serve from)*
-2. Commit changes
-3. Navigate to `[USERNAME].github.io/[YOUR_WORKSPACE_NAME]/[YOUR_APP_NAME]`
+1. Make sure the `defaultProject` value in angular.json is [YOUR_APP_NAME] 
+2. Run the project GitHub pages npm build command *(this builds and creates docs/[YOUR_APP_NAME] content that GitHub pages will serve from)*
+3. Commit changes
+4. Navigate to `[USERNAME].github.io/[YOUR_WORKSPACE_NAME]/[YOUR_APP_NAME]`
