@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  template: `
-    health app
-  `,
-  styles: []
+  template: `HealthApp`
 })
 export class AppComponent {
 }
