@@ -12,7 +12,7 @@ When you want to use a single repository and host multiple Angular apps with sep
 2. Add new Angular app `ng generate application [YOUR_APP_NAME] --minimal`
 3. Replace `dist` with `docs` in angular.json `outputPath` configurations
 4. Add project npm serve command to package.json - `"serve-[YOUR_APP_NAME]": "ng serve --project=[YOUR_APP_NAME]"`
-5. Add project GitHub pages npm build command - `"build-gh-pages-[YOUR_APP_NAME]": "ng build --outputPath docs/[YOUR_APP_NAME] --base-href /[YOUR_WORKSPACE_NAME]/[YOUR_APP_NAME]/"`
+5. Add project GitHub pages npm build command - `"build-gh-pages-[YOUR_APP_NAME]": "ng build --outputPath docs/[YOUR_APP_NAME] --base-href /[YOUR_WORKSPACE_NAME]/[YOUR_APP_NAME]/"` *(IMPORTANT! The trailing "/" character is required for everything to work right in GitHub pages)*
 
 #### Setup GitHub pages
 1. Navigate to GitHub repo settings, scroll down and click the GitHub pages link
