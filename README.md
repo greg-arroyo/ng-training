@@ -8,6 +8,10 @@ An Angular multi-project workspace with various training projects and demos. Int
 - HostBinding, HostListener
 - ElementRef
 
+### Health App [In Progress]
+
+- Demo: <a href="https://greg-arroyo.github.io/ng-training/health-app/">https://greg-arroyo.github.io/ng-training/health-app/</a>
+
 ### Reactive Forms
 
 - Demo: <a href="https://greg-arroyo.github.io/ng-training/reactive-forms/">https://greg-arroyo.github.io/ng-training/reactive-forms/</a>
