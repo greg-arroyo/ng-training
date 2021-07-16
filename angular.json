@@ -266,8 +266,7 @@
             "tsConfig": "projects/health-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/health-app/src/favicon.ico",
-              "projects/health-app/src/assets"
+              "projects/health-app/src/favicon.ico"
             ],
             "styles": [
               "projects/health-app/src/styles.scss"
@@ -317,7 +316,7 @@
               "browserTarget": "health-app:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
