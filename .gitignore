@@ -2,17 +2,29 @@
 .idea
 .vscode
 
+# Firebase
+.firebase/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
 # Node
 node_modules
 
-## Windows
+# Logs
+*.log
+npm-debug.log
+firebase-debug.log*
+firebase-debug.*.log*
+
+# Windows
 Thumbs.db
 ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
-
-# Package Managers
-npm-debug.log
 
 # Build
 build
