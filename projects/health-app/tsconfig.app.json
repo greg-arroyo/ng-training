@@ -3,7 +3,14 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
-    "types": []
+    "types": [],
+    "paths": {
+      "store": [
+        "src/store.ts"
+      ]
+    },
+    "noEmitHelpers": true,
+    "noImplicitAny": true
   },
   "files": [
     "src/main.ts",

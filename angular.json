@@ -265,8 +265,13 @@
             "polyfills": "projects/health-app/src/polyfills.ts",
             "tsConfig": "projects/health-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
+            "allowedCommonJsDependencies": [
+              "rxjs/add/operator/distinctUntilChanged",
+              "rxjs/add/operator/pluck"
+            ],
             "assets": [
-              "projects/health-app/src/favicon.ico"
+              "projects/health-app/src/favicon.ico",
+              "projects/health-app/src/assets"
             ],
             "styles": [
               "projects/health-app/src/styles.scss"
