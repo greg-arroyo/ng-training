@@ -12,7 +12,7 @@
   h1 {
     margin: 0 0 25px;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 700;
     text-align: center;
   }
   button {
@@ -41,6 +41,7 @@
     text-align: center;
     color: #5e7386;
     font-size: 14px;
+    text-decoration: none;
   }
 }
 
@@ -65,15 +66,16 @@
   label {
     display: block;
     margin: 0;
+    width: 368px;
   }
   input {
     outline: 0;
-    font-size: 16px;
+    font-size: 15px;
     padding: 10px 15px;
     margin: 0;
     width: 100%;
     background: #fafcfd;
-    color: #5777a8;
+    color: #000;
     border: 1px solid #d1deeb;
     text-align: center;
     &::-webkit-input-placeholder {
