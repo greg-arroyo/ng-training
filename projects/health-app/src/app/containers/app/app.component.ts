@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
   template: `
     <div>
-      HealthApp
+      <div class="app-name">HealthApp</div>
       <div class="wrapper">
         <router-outlet></router-outlet>
       </div>
