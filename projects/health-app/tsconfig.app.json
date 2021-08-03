@@ -4,11 +4,6 @@
   "compilerOptions": {
     "outDir": "../../out-tsc/app",
     "types": [],
-    "paths": {
-      "store": [
-        "src/store.ts"
-      ]
-    },
     "noEmitHelpers": true,
     "noImplicitAny": true
   },
