@@ -26,7 +26,8 @@ export class RegisterComponent {
   constructor(
     private authService: AuthService,
     private router: Router
-  ) {}
+  ) {
+  }
 
   async registerUser(event: FormGroup) {
     const { email, password } = event.value;

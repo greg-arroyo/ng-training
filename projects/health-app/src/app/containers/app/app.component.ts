@@ -1,7 +1,7 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AuthService, User } from "../../../auth/shared/services/auth/auth.service";
-import { Observable, Subscription, Subject } from "rxjs";
+import { Observable, Subject, Subscription } from "rxjs";
 import { takeUntil } from "rxjs/operators";
 import { Store } from '../../../store';
 
@@ -11,8 +11,8 @@ import { Store } from '../../../store';
   template: `
     <div>
       <app-header
-      [user]="user$ | async"
-      (logout)="onLogout()">
+        [user]="user$ | async"
+        (logout)="onLogout()">
       </app-header>
       <app-nav
         *ngIf="(user$ | async)?.authenticated">
@@ -33,12 +33,13 @@ export class AppComponent implements OnInit, OnDestroy {
     private store: Store,
     private authService: AuthService,
     private router: Router
-  ) {}
+  ) {
+  }
 
   ngOnInit() {
     this.subscription = this.authService.auth$
-      .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe();
+    .pipe(takeUntil(this.ngUnsubscribe))
+    .subscribe();
     this.user$ = this.store.select<User>('user');
   }
 

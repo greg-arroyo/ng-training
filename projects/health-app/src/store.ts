@@ -7,6 +7,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
 
 export interface State {
   user: User,
+
   [key: string]: any
 }
 
