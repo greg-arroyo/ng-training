@@ -20,16 +20,16 @@
     outline: 0;
     width: 100%;
     border-radius: 2px;
-    border: 1px solid #1c79b8;
-    background: #39a1e7;
+    border: 1px solid #106529;
+    background: #158837;
     color: #fff;
     padding: 10px;
     font-size: 16px;
     font-weight: 600;
     transition: all 0.2s ease-in-out;
     &:hover {
-      background: darken(#39a1e7, 5%);
-      border-color: darken(#1c79b8, 5%);
+      background: darken(#158837, 5%);
+      border-color: darken(#106529, 5%);
     }
     &:disabled {
       opacity: .4;
@@ -79,7 +79,7 @@
     border: 1px solid #d1deeb;
     text-align: center;
     &::-webkit-input-placeholder {
-      color: #5777a8;
+      color: #a5a5a5;
     }
     &[type=email] {
       border-radius: 3px 3px 0 0;

@@ -39,4 +39,8 @@ export class AuthService {
   loginUser(email: string, password: string) {
     return this.authFire.signInWithEmailAndPassword(email, password);
   }
+
+  logoutUser() {
+    return this.authFire.signOut();
+  }
 }

@@ -267,7 +267,8 @@
             "inlineStyleLanguage": "scss",
             "allowedCommonJsDependencies": [
               "rxjs/add/operator/distinctUntilChanged",
-              "rxjs/add/operator/pluck"
+              "rxjs/add/operator/pluck",
+              "rxjs/add/operator/do"
             ],
             "assets": [
               "projects/health-app/src/favicon.ico",
@@ -283,7 +284,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "750kb",
                   "maximumError": "1mb"
                 },
                 {
