@@ -33,7 +33,7 @@ export class RegisterComponent {
     const { email, password } = event.value;
     try {
       await this.authService.createUser(email, password);
-      this.router.navigate(['/']);
+      await this.router.navigate(['/']);
     } catch (err) {
       this.error = err.message;
     }
