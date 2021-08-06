@@ -2,15 +2,8 @@
 
 An Angular multi-project workspace with various training projects and demos. Interested in creating an Angular multi-project workspace with multiple apps hosted on GitHub pages using a single repository? Read the [instructions here](https://github.com/greg-arroyo/ng-training/blob/master/INSTRUCTIONS.md).
 
-### Directives
-
-- Demo: <a href="https://greg-arroyo.github.io/ng-training/directives/">https://greg-arroyo.github.io/ng-training/directives/</a>
-- HostBinding, HostListener
-- ElementRef
-
-### Health App [In Progress]
-
-- Demo: <a href="https://greg-arroyo.github.io/ng-training/health-app/">https://greg-arroyo.github.io/ng-training/health-app/</a>
+### Health App [In Progress] [![Netlify Status](https://api.netlify.com/api/v1/badges/dad62b3a-7904-488f-bdbb-36fdc5b62e4f/deploy-status)](https://app.netlify.com/sites/ng-training-health-app/deploys)
+- Demo: <a href="https://ng-training-health-app.netlify.app">https://ng-training-health-app.netlify.app</a>
 
 ### Reactive Forms
 

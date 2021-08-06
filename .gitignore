@@ -1,7 +1,7 @@
 # Project
 .idea
 .vscode
-projects/health-app/dist
+projects/**/dist
 
 # Firebase
 .firebase/
