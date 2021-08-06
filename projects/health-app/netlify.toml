@@ -1,6 +1,6 @@
 [build]
   base = "projects/health-app"
-  command = "ng build --project=health-app"
+  command = "npx run ng build --project=health-app"
   publish = "projects/health-app/dist"
 [[redirects]]
   from = "/*"
