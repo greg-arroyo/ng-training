@@ -18,4 +18,5 @@ export const routes: Routes = [
     WorkoutsComponent
   ]
 })
-export class WorkoutsModule {}
+export class WorkoutsModule {
+}

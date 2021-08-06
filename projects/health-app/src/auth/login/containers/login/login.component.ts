@@ -32,7 +32,7 @@ export class LoginComponent {
     const { email, password } = event.value;
     try {
       await this.authService.loginUser(email, password);
-      await this.router.navigate(['/']);
+      await this.router.navigate(['/schedule']);
     } catch (err) {
       this.error = err.message;
     }

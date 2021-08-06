@@ -10,5 +10,6 @@ import { Component } from "@angular/core";
   `
 })
 export class ScheduleComponent {
-  constructor() {}
+  constructor() {
+  }
 }

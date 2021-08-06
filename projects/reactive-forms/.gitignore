@@ -1,0 +1,21 @@
+# Project
+.idea
+.vscode
+dist/
+
+# Node
+node_modules
+
+# Logs
+*.log
+npm-debug.log
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Build
+build
+vendor/*-manifest.json

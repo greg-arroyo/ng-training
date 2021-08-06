@@ -18,4 +18,5 @@ export const routes: Routes = [
     ScheduleComponent
   ]
 })
-export class ScheduleModule {}
+export class ScheduleModule {
+}

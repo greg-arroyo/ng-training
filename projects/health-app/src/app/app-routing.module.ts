@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from "../auth/shared/guards/auth.guard";
 
 const routes: Routes = [
+  { path: '', canActivate: [AuthGuard], loadChildren: () => import('../health/schedule/schedule.module').then(r => r.ScheduleModule) },
   {
     path: 'auth',
     children: [
@@ -10,9 +12,9 @@ const routes: Routes = [
       { path: 'register', loadChildren: () => import('../auth/register/register.module').then(r => r.RegisterModule) }
     ]
   },
-  { path: 'schedule', loadChildren: () => import('../health/schedule/schedule.module').then(r => r.ScheduleModule) },
-  { path: 'meals', loadChildren: () => import('../health/meals/meals.module').then(r => r.MealsModule ) },
-  { path: 'workouts', loadChildren: () => import('../health/workouts/workouts.module').then(r => r.WorkoutsModule) }
+  { path: 'schedule', canActivate: [AuthGuard], loadChildren: () => import('../health/schedule/schedule.module').then(r => r.ScheduleModule) },
+  { path: 'meals', canActivate: [AuthGuard], loadChildren: () => import('../health/meals/meals.module').then(r => r.MealsModule ) },
+  { path: 'workouts', canActivate: [AuthGuard], loadChildren: () => import('../health/workouts/workouts.module').then(r => r.WorkoutsModule) }
 ];
 
 @NgModule({

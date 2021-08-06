@@ -1,0 +1,4 @@
+[build]
+  base = "projects/reactive-forms"
+  publish = "dist"
+  command = "ng build"
