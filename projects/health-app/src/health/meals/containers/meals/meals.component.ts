@@ -9,6 +9,7 @@ import { Component } from "@angular/core";
     </div>
   `
 })
-export class MealsComponent{
-  constructor() {}
+export class MealsComponent {
+  constructor() {
+  }
 }

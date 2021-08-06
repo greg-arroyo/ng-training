@@ -18,4 +18,5 @@ export const routes: Routes = [
     MealsComponent
   ]
 })
-export class MealsModule {}
+export class MealsModule {
+}
