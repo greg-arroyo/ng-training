@@ -15,4 +15,5 @@ import { StockInventoryModule } from './stock-inventory/containers/stock-invento
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
