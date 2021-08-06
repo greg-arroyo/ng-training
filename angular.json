@@ -268,7 +268,8 @@
             "allowedCommonJsDependencies": [
               "rxjs/add/operator/distinctUntilChanged",
               "rxjs/add/operator/pluck",
-              "rxjs/add/operator/do"
+              "rxjs/add/operator/do",
+              "rxjs/add/operator/map"
             ],
             "assets": [
               "projects/health-app/src/favicon.ico",
