@@ -165,8 +165,7 @@
             ],
             "assets": [
               "projects/health-app/src/favicon.ico",
-              "projects/health-app/src/assets",
-              "projects/health-app/src/_redirects"
+              "projects/health-app/src/assets"
             ],
             "styles": [
               "projects/health-app/src/styles.scss"

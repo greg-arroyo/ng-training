@@ -1,0 +1,8 @@
+[build]
+  base = "projects/health-app"
+  command = "ng build --project=health-app"
+  publish = "projects/health-app/dist"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
