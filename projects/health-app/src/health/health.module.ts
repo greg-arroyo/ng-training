@@ -12,4 +12,5 @@ export const routes: Routes = [
     RouterModule.forChild(routes)
   ]
 })
-export class HealthModule {}
+export class HealthModule {
+}

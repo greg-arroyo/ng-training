@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
       <form [formGroup]="form" (ngSubmit)="onSubmit()">
         <ng-content select="h1"></ng-content>
         <label>
-          <input 
+          <input
             type="email"
             placeholder="Email address"
             formControlName="email">
@@ -48,7 +48,8 @@ export class AuthFormComponent {
 
   constructor(
     private fb: FormBuilder
-  ) {}
+  ) {
+  }
 
   onSubmit() {
     if (this.form.valid) {

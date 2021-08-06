@@ -14,23 +14,24 @@ export interface User {
 })
 export class AuthService {
   auth$ = this.authFire.authState
-    .do(next => {
-      if (!next) {
-        this.store.set('user', null);
-        return;
-      }
-      const user: User = {
-        email: next.email,
-        uid: next.uid,
-        authenticated: true
-      }
-      this.store.set('user', user);
-    });
+  .do(next => {
+    if (!next) {
+      this.store.set('user', null);
+      return;
+    }
+    const user: User = {
+      email: next.email,
+      uid: next.uid,
+      authenticated: true
+    }
+    this.store.set('user', user);
+  });
 
   constructor(
     private store: Store,
     private authFire: AngularFireAuth
-  ) {}
+  ) {
+  }
 
   get authState() {
     return this.authFire.authState;

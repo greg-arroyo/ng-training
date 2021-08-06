@@ -25,4 +25,5 @@ export const firebaseConfig: FirebaseAppConfig = {
     SharedModule
   ],
 })
-export class AuthModule {}
+export class AuthModule {
+}

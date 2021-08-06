@@ -21,4 +21,5 @@ import { AuthGuard } from "./guards/auth.guard";
     AuthFormComponent
   ]
 })
-export class SharedModule {}
+export class SharedModule {
+}
