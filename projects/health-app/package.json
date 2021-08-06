@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "ng": "ng",
+    "build:health-app": "ng build --project=health-app"
+  }
+}
