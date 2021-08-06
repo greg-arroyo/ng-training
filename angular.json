@@ -259,7 +259,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs/health-app",
+            "outputPath": "projects/health-app/dist",
             "index": "projects/health-app/src/index.html",
             "main": "projects/health-app/src/main.ts",
             "polyfills": "projects/health-app/src/polyfills.ts",
