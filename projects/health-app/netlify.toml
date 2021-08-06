@@ -1,7 +1,6 @@
 [build]
-  base = "projects/health-app"
-  command = "npm -i @angular/cli && ng build --project=health-app"
-  publish = "dist"
+  command = "ng build --project=health-app"
+  publish = "projects/health-app/dist"
 [[redirects]]
   from = "/*"
   to = "/index.html"
