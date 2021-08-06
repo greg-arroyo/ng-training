@@ -1,7 +1,3 @@
-[build]
-  base = "projects/health-app"
-  command = "cd.. && ng build --project=health-app"
-  publish = "dist"
 [[redirects]]
   from = "/*"
   to = "/index.html"
