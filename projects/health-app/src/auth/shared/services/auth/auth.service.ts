@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireAuth } from "@angular/fire/auth";
+import { AngularFireAuth } from '@angular/fire/auth';
 import { Store } from '../../../../store';
 import 'rxjs/add/operator/do';
 
@@ -31,6 +31,10 @@ export class AuthService {
     private store: Store,
     private authFire: AngularFireAuth
   ) {
+  }
+
+  get user() {
+    return this.authFire.currentUser;
   }
 
   get authState() {
