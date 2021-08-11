@@ -8,8 +8,32 @@ import { Store } from 'store';
   selector: 'meals',
   styleUrls: ['meals.component.scss'],
   template: `
-    <div>
-      {{ meals$ | async | json }}
+    <div class="meals">
+      <div class="meals__title">
+        <h1>
+          <img src="../../../../assets/food.svg" alt="Your meals">
+          Your meals
+        </h1>
+        <a 
+          class="btn__add"
+          [routerLink]="['../meals/new']">
+          <img src="../../../../assets/add-white.svg" alt="New Meal">
+          New Meal
+        </a>
+      </div>
+      <div *ngIf="meals$ | async as meals; else loading;">
+        <div class="message" *ngIf="!meals.length">
+          <img src="../../../../assets/face.svg" alt="Add a meal to get started.">
+          No meals, add a new meal to start.
+        </div>
+        <!-- meals list -->
+      </div>
+      <ng-template #loading>
+        <div class="message">
+          <img src="../../../../assets/loading.svg" alt="Loading...">
+          Fetching meals...
+        </div>
+      </ng-template>
     </div>
   `
 })
