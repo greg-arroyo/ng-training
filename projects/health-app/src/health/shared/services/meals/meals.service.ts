@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import { AngularFireDatabase } from "@angular/fire/database";
-import { Store } from "../../../../store";
-import { Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/database';
+import { Store } from 'store';
+import { Observable } from 'rxjs';
 
 export interface Meal {
   name: string,
@@ -16,8 +16,8 @@ export interface Meal {
 })
 export class MealsService {
   meals$: Observable<Meal[]> = this.db.list<Meal>(`meals/${this.uid}`)
-    .valueChanges()
-    .do(next => this.store.set('meals', next));
+  .valueChanges()
+  .do(next => this.store.set('meals', next));
 
   constructor(
     private store: Store,
@@ -26,7 +26,6 @@ export class MealsService {
   }
 
   get uid() {
-    // temporary till we can get uid from authservice.user
     return this.store.value.user.uid;
   }
 }

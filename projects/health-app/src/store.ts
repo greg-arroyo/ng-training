@@ -1,7 +1,7 @@
 import { BehaviorSubject, Observable } from 'rxjs';
 import { distinctUntilChanged, pluck } from "rxjs/operators";
 import { User } from "./auth/shared/services/auth/auth.service";
-import { Meal } from "./health/shared/services/meals/meals.service";
+import { Meal } from './health/shared/services/meals/meals.service';
 import 'rxjs/add/operator/pluck';
 import 'rxjs/add/operator/distinctUntilChanged';
 

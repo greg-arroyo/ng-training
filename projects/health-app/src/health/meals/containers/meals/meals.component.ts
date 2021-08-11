@@ -1,8 +1,8 @@
-import { Component, OnDestroy, OnInit } from "@angular/core";
-import { Meal, MealsService } from "../../../shared/services/meals/meals.service";
-import { Observable, Subject, Subscription } from "rxjs";
-import { takeUntil } from "rxjs/operators";
-import { Store } from "../../../../store";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Meal, MealsService } from '../../../shared/services/meals/meals.service';
+import { Observable, Subject, Subscription } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { Store } from 'store';
 
 @Component({
   selector: 'meals',

@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { AuthService, User } from "../../../auth/shared/services/auth/auth.service";
-import { Observable, Subject, Subscription } from "rxjs";
-import { takeUntil } from "rxjs/operators";
-import { Store } from '../../../store';
+import { AuthService, User } from '../../../auth/shared/services/auth/auth.service';
+import { Observable, Subject, Subscription } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
+import { Store } from 'store';
 
 @Component({
   selector: 'app-root',
