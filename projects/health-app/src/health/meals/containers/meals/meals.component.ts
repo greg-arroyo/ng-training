@@ -11,8 +11,8 @@ import { Store } from 'store';
     <div class="meals">
       <div class="meals__title">
         <h1>
-          <img src="../../../../assets/food.svg" alt="Your meals">
-          Your meals
+          <img src="../../../../assets/food.svg" alt="My meals">
+          My meals
         </h1>
         <a 
           class="btn__add"
