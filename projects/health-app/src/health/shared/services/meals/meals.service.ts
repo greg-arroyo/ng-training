@@ -6,6 +6,8 @@ import 'rxjs-compat/add/observable/of';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/find';
+import { empty } from 'rxjs/internal/Observer';
+import 'rxjs-compat/add/observable/empty';
 
 export interface Meal {
   name: string,
@@ -40,6 +42,13 @@ export class MealsService {
   }
 
   getMeal(key: string) {
+    if (!key) return Observable.of({
+      name: '',
+      ingredients: [],
+      timestamp: null,
+      $key: '',
+      $exists: false
+    });
     return this.store.select<Meal[]>('meals')
       .filter(Boolean)
       .map((meals: Meal[]) => meals.find((meal: Meal) => meal.$key === key));
@@ -47,6 +56,10 @@ export class MealsService {
 
   addMeal(meal: Meal) {
     return this.db.list(`meals/${this.uid}`).push(meal);
+  }
+
+  updateMeal(key: string, meal: Meal) {
+    return this.db.object(`meals/${this.uid}/${key}`).update(meal);
   }
 
   removeMeal(key: string) {
