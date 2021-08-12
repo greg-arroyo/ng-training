@@ -6,7 +6,6 @@ import 'rxjs-compat/add/observable/of';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/find';
-import { empty } from 'rxjs/internal/Observer';
 import 'rxjs-compat/add/observable/empty';
 
 export interface Meal {
