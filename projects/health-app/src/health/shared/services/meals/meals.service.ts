@@ -16,8 +16,14 @@ export interface Meal {
 })
 export class MealsService {
   meals$: Observable<Meal[]> = this.db.list<Meal>(`meals/${this.uid}`)
-  .valueChanges()
-  .do(next => this.store.set('meals', next));
+  .snapshotChanges()
+  .map(snapshot => {
+    return snapshot.map(c => ({
+      $key: c.payload.key,
+      $exists: c.payload.exists,
+      ...c.payload.val()
+    }))
+  }).do(next => { this.store.set('meals', next) });
 
   constructor(
     private store: Store,
@@ -27,5 +33,13 @@ export class MealsService {
 
   get uid() {
     return this.store.value.user.uid;
+  }
+
+  addMeal(meal: Meal) {
+    return this.db.list(`meals/${this.uid}`).push(meal);
+  }
+
+  removeMeal(key: string) {
+    return this.db.list(`meals/${this.uid}`).remove(key);
   }
 }

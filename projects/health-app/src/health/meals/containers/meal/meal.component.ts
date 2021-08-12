@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Meal } from "../../../shared/services/meals/meals.service";
+import { Router } from '@angular/router';
+import { Meal, MealsService } from "../../../shared/services/meals/meals.service";
 
 @Component({
   selector: 'meal',
@@ -8,7 +9,7 @@ import { Meal } from "../../../shared/services/meals/meals.service";
     <div class="meal">
       <div class="meal__title">
         <h1>
-          <img src="../../../../assets/food.svg">
+          <img src="../../../../assets/food.svg" alt="Create meal">
           <span>Create meal</span>
         </h1>
       </div>
@@ -21,10 +22,18 @@ import { Meal } from "../../../shared/services/meals/meals.service";
   `
 })
 export class MealComponent {
-  constructor() {
+  constructor(
+    private mealsService: MealsService,
+    private router: Router
+  ) {
   }
 
-  addMeal(event: Meal) {
-    console.log('Meal', event);
+  async addMeal(event: Meal) {
+    this.mealsService.addMeal(event);
+    await this.backToMeals();
+  }
+
+  async backToMeals() {
+    await this.router.navigate(['meals']);
   }
 }
