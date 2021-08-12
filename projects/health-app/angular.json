@@ -51,7 +51,11 @@
               "rxjs/add/operator/distinctUntilChanged",
               "rxjs/add/operator/pluck",
               "rxjs/add/operator/do",
-              "rxjs/add/operator/map"
+              "rxjs/add/operator/map",
+              "rxjs/add/operator/switchMap",
+              "rxjs/add/operator/filter",
+              "rxjs/add/operator/find",
+              "rxjs-compat/add/observable/of"
             ],
             "assets": [
               "src/favicon.ico",
@@ -72,8 +76,8 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "4kb",
+                  "maximumError": "6kb"
                 }
               ],
               "fileReplacements": [
@@ -105,7 +109,7 @@
               "browserTarget": "health-app:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
