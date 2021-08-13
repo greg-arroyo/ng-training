@@ -6,7 +6,6 @@ import 'rxjs-compat/add/observable/of';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/find';
-import 'rxjs-compat/add/observable/empty';
 
 export interface Workout {
   name: string,
