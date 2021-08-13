@@ -96,7 +96,7 @@
 
   h3 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 400;
   }
 
   label {
@@ -152,16 +152,16 @@
     outline: 0;
     border: 0;
     border-radius: 2px;
-    background: #39a1e7;
+    background: #158837;
     color: #fff;
     padding: 10px 18px;
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 400;
     transition: all 0.2s ease-in-out;
     display: inline-block;
 
     &:hover {
-      background: darken(#39a1e7, 5%);
+      background: darken(#158837, 5%);
     }
 
     &:disabled {
@@ -172,6 +172,7 @@
     &--cancel {
       background: #fff;
       color: #545e6f;
+      text-decoration: none;
 
       &:hover {
         background: #fff;

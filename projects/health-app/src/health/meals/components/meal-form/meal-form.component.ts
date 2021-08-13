@@ -78,7 +78,7 @@ import { FormArray, FormGroup, FormBuilder, FormControl, Validators } from '@ang
             class="meal-form__delete"
             *ngIf="exists">
             <div *ngIf="toggled">
-              <p>Delete meal?</p>
+              <p>Are you sure?</p>
               <button
                 class="confirm"
                 type="button"

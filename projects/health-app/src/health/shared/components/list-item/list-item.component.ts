@@ -23,7 +23,7 @@ import {
       <div 
         class="list-item__delete"
         *ngIf="toggled">
-        <p>Delete item?</p>
+        <p>Are you sure?</p>
         <button
           class="confirm"
           type="button"

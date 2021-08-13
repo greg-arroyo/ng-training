@@ -22,8 +22,13 @@ import { FormArray, FormGroup, FormBuilder, FormControl, Validators } from '@ang
             <h3>Workout name</h3>
             <input
               type="text"
-              placeholder="i.e.: Hamburger"
+              placeholder="i.e.: My Workout"
               formControlName="name">
+          </label>
+          <label>
+            <h3>Type</h3>
+            <workout-type formControlName="type">
+            </workout-type>
           </label>
           <div class="error" *ngIf="required">
             Workout name is required
@@ -55,7 +60,7 @@ import { FormArray, FormGroup, FormBuilder, FormControl, Validators } from '@ang
             class="workout-form__delete"
             *ngIf="exists">
             <div *ngIf="toggled">
-              <p>Delete workout?</p>
+              <p>Are you sure?</p>
               <button
                 class="confirm"
                 type="button"
@@ -98,7 +103,8 @@ export class WorkoutFormComponent implements OnChanges {
   exists = false;
 
   form = this.formBuilder.group({
-    name: ['', Validators.required]
+    name: ['', Validators.required],
+    type: 'strength'
   });
 
   constructor(
