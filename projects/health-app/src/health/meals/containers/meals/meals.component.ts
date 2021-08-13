@@ -24,7 +24,7 @@ import { Store } from 'store';
       <div *ngIf="meals$ | async as meals; else loading;">
         <div class="message" *ngIf="!meals.length">
           <img src="../../../../assets/face.svg" alt="Add a meal to get started.">
-          No meals, add a new meal to start.
+          No meals, add a new meal to get started.
         </div>
         <list-item
           *ngFor="let meal of meals"

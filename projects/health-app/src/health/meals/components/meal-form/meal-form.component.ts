@@ -104,7 +104,7 @@ import { FormArray, FormGroup, FormBuilder, FormControl, Validators } from '@ang
     </div>
   `
 })
-export class MealFormComponent implements OnChanges{
+export class MealFormComponent implements OnChanges {
   @Input()
   meal: Meal;
 
