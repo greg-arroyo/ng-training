@@ -25,14 +25,14 @@ import { FormArray, FormGroup, FormBuilder, FormControl, Validators } from '@ang
               placeholder="i.e.: My Workout"
               formControlName="name">
           </label>
+          <div class="error" *ngIf="required">
+            Workout name is required
+          </div>
           <label>
             <h3>Type</h3>
             <workout-type formControlName="type">
             </workout-type>
           </label>
-          <div class="error" *ngIf="required">
-            Workout name is required
-          </div>
         </div>
         <div class="workout-form__submit">
           <div>
