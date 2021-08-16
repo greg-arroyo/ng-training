@@ -17,7 +17,7 @@ import { FormBuilder, FormGroup, Validators } from "@angular/forms";
         <label>
           <input
             type="password"
-            placeholder="Email password"
+            placeholder="Password"
             formControlName="password">
         </label>
         <div class="error" *ngIf="emailFormat">
