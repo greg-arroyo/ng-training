@@ -5,6 +5,8 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { MealsService } from './services/meals/meals.service';
 import { WorkoutsService } from './services/workouts/workouts.service';
 import { ListItemComponent } from './components/list-item/list-item.component';
+import { JoinPipe } from './pipes/join.pipe';
+import { WorkoutPipe } from './pipes/workout.pipe';
 
 @NgModule({
   imports: [
@@ -13,10 +15,14 @@ import { ListItemComponent } from './components/list-item/list-item.component';
     AngularFireDatabaseModule
   ],
   declarations: [
-    ListItemComponent
+    ListItemComponent,
+    JoinPipe,
+    WorkoutPipe
   ],
   exports: [
-    ListItemComponent
+    ListItemComponent,
+    JoinPipe,
+    WorkoutPipe
   ],
   providers: [
     MealsService,

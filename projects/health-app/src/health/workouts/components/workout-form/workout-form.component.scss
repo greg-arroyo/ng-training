@@ -37,13 +37,13 @@
 
 .workout-form {
   &__name {
-    padding: 30px;
+    padding: 30px 60px 30px 30px;
     flex-direction: column;
     border-bottom: 1px solid #d1deeb;
   }
 
   &__details {
-    padding: 30px;
+    padding: 30px 60px 30px 30px;
     border-bottom: 1px solid #d1deeb;
   }
 
@@ -117,7 +117,7 @@
 
     label {
       flex: 1 0;
-      margin: 0 10px 10px 0;
+      margin: 0 40px 10px 0;
 
       &:last-child {
         margin: 0 0 10px;

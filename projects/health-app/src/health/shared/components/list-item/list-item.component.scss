@@ -29,6 +29,7 @@
     p {
       margin: 0 10px 0 0;
       font-size: 14px;
+      white-space: nowrap;
     }
   }
 
@@ -41,6 +42,7 @@
     font-weight: 400;
     color: #545e6f;
     font-size: 16px;
+    text-decoration: none;
   }
 }
 
@@ -79,6 +81,7 @@
   padding: 10px 15px;
   background: #f6fafd;
   transition: all .2s ease-in-out;
+  text-wrap: none;
 
   &:hover {
     background-color: darken(#f6fafd, 2%);
