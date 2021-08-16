@@ -64,6 +64,7 @@ export class MealComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscription.unsubscribe();
     this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 
   async addMeal(event: Meal) {

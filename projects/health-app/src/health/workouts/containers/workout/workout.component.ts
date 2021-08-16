@@ -64,6 +64,7 @@ export class WorkoutComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscription.unsubscribe();
     this.ngUnsubscribe.next();
+    this.ngUnsubscribe.complete();
   }
 
   async addWorkout(event: Workout) {
