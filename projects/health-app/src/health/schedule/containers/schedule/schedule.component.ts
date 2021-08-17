@@ -3,6 +3,8 @@ import { Observable, Subject, Subscription } from 'rxjs';
 import { Store } from 'store';
 import { ScheduleItem, ScheduleService } from '../../../shared/services/schedule/schedule.service';
 import { takeUntil } from 'rxjs/operators';
+import { Workout, WorkoutsService } from '../../../shared/services/workouts/workouts.service';
+import { Meal, MealsService } from '../../../shared/services/meals/meals.service';
 
 @Component({
   selector: 'schedule',
@@ -15,11 +17,20 @@ import { takeUntil } from 'rxjs/operators';
         (change)="changeDate($event)"
         (select)="changeSection($event)">
       </schedule-calendar>
+      <schedule-assign
+        *ngIf="open"
+        [section]="selected$ | async"
+        [list]="list$ | async">
+      </schedule-assign>
     </div>
   `
 })
 export class ScheduleComponent implements OnInit, OnDestroy {
+  open = false;
+
   date$: Observable<Date>;
+  selected$: Observable<any>;
+  list$: Observable<Meal[] | Workout[]>;
   schedule$: Observable<ScheduleItem[]>;
   subscriptions: Subscription[] = [];
 
@@ -27,7 +38,9 @@ export class ScheduleComponent implements OnInit, OnDestroy {
 
   constructor(
     private store: Store,
-    private scheduleService: ScheduleService
+    private scheduleService: ScheduleService,
+    private mealsService: MealsService,
+    private workoutsService: WorkoutsService
   ) {
   }
 
@@ -36,18 +49,30 @@ export class ScheduleComponent implements OnInit, OnDestroy {
   }
 
   changeSection(event: any) {
+    this.open = true;
     this.scheduleService.selectSection(event);
   }
 
   ngOnInit() {
     this.date$ = this.store.select('date');
     this.schedule$ = this.store.select('schedule');
+    this.selected$ = this.store.select('selected');
+    this.list$ = this.store.select('list');
 
     this.subscriptions = [
       this.scheduleService.schedule$
         .pipe(takeUntil(this.ngUnsubscribe))
         .subscribe(),
       this.scheduleService.selected$
+        .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe(),
+      this.scheduleService.list$
+        .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe(),
+      this.mealsService.meals$
+        .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe(),
+      this.workoutsService.workouts$
         .pipe(takeUntil(this.ngUnsubscribe))
         .subscribe()
     ];
