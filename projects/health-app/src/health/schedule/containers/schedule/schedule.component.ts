@@ -12,7 +12,8 @@ import { takeUntil } from 'rxjs/operators';
       <schedule-calendar
         [date]="date$ | async"
         [items]="schedule$ | async"
-        (change)="changeDate($event)">
+        (change)="changeDate($event)"
+        (select)="changeSection($event)">
       </schedule-calendar>
     </div>
   `
@@ -34,14 +35,21 @@ export class ScheduleComponent implements OnInit, OnDestroy {
     this.scheduleService.updateDate(date);
   }
 
+  changeSection(event: any) {
+    this.scheduleService.selectSection(event);
+  }
+
   ngOnInit() {
     this.date$ = this.store.select('date');
     this.schedule$ = this.store.select('schedule');
 
     this.subscriptions = [
       this.scheduleService.schedule$
-      .pipe(takeUntil(this.ngUnsubscribe))
-      .subscribe(),
+        .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe(),
+      this.scheduleService.selected$
+        .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe()
     ];
   }
 
