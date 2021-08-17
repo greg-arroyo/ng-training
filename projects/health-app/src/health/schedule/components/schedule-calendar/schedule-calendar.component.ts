@@ -14,6 +14,11 @@ import { ScheduleItem, ScheduleList } from '../../../shared/services/schedule/sc
         [selected]="selectedDayIndex"
         (select)="selectDay($event)">
       </schedule-days>
+      <schedule-section
+        *ngFor="let section of sections"
+        [name]="section.name"
+        [section]="getSection(section.key)">
+      </schedule-section>
     </div>
   `
 })
@@ -48,8 +53,8 @@ export class ScheduleCalendarComponent implements OnChanges {
     this.selectedWeek = this.getStartOfWeek(new Date(this.selectedDay));
   }
 
-  get section(name: string): ScheduleItem {
-    return this.items;
+  getSection(name: string): ScheduleItem {
+    return this.items && this.items[name] || {};
   }
 
   selectDay(index: number) {
