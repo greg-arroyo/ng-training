@@ -20,7 +20,9 @@ import { Meal, MealsService } from '../../../shared/services/meals/meals.service
       <schedule-assign
         *ngIf="open"
         [section]="selected$ | async"
-        [list]="list$ | async">
+        [list]="list$ | async"
+        (update)="assignItem($event)"
+        (cancel)="closeAssign()">
       </schedule-assign>
     </div>
   `
@@ -69,6 +71,9 @@ export class ScheduleComponent implements OnInit, OnDestroy {
       this.scheduleService.list$
         .pipe(takeUntil(this.ngUnsubscribe))
         .subscribe(),
+      this.scheduleService.items$
+        .pipe(takeUntil(this.ngUnsubscribe))
+        .subscribe(),
       this.mealsService.meals$
         .pipe(takeUntil(this.ngUnsubscribe))
         .subscribe(),
@@ -82,5 +87,14 @@ export class ScheduleComponent implements OnInit, OnDestroy {
     this.subscriptions.forEach(sub => sub.unsubscribe());
     this.ngUnsubscribe.next();
     this.ngUnsubscribe.complete();
+  }
+
+  assignItem(items: string[]) {
+    this.scheduleService.updateItems(items);
+    this.closeAssign();
+  }
+
+  closeAssign() {
+    this.open = false;
   }
 }

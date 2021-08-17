@@ -55,6 +55,7 @@
               "rxjs/add/operator/switchMap",
               "rxjs/add/operator/filter",
               "rxjs/add/operator/find",
+              "rxjs/add/operator/withLatestFrom",
               "rxjs-compat/add/observable/of"
             ],
             "assets": [
