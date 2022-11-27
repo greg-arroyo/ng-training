@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'stock-branch',
@@ -41,7 +41,7 @@ import { FormGroup } from '@angular/forms';
   `
 })
 export class StockBranchComponent {
-  @Input() parent: FormGroup;
+  @Input() parent: UntypedFormGroup;
 
   get invalidBranchId() {
     return (

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AbstractControl, FormArray, FormBuilder, Validators } from '@angular/forms';
+import { AbstractControl, UntypedFormArray, UntypedFormBuilder, Validators } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { map } from "rxjs/operators";
 import { CartItem, Product } from '../../models/product.interface';
@@ -56,11 +56,11 @@ export class StockInventoryComponent implements OnInit {
       code: ['', Validators.required]
     }),
     selector: this.createItem({}),
-    items: new FormArray([], [Validators.required])
+    items: new UntypedFormArray([], [Validators.required])
   }, { validator: StockValidators.checkItemExists });
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private itemService: StockItemService
   ) {
   }
@@ -89,12 +89,12 @@ export class StockInventoryComponent implements OnInit {
   }
 
   addItem(item) {
-    const control = this.form.get('items') as FormArray;
+    const control = this.form.get('items') as UntypedFormArray;
     control.push(this.createItem(item));
   }
 
   removeItem(index) {
-    const control = this.form.get('items') as FormArray;
+    const control = this.form.get('items') as UntypedFormArray;
     control.removeAt(index);
   }
 

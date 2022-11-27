@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormArray, FormGroup } from '@angular/forms';
+import { UntypedFormArray, UntypedFormGroup } from '@angular/forms';
 import { Product } from '../../models/product.interface';
 
 @Component({
@@ -41,7 +41,7 @@ import { Product } from '../../models/product.interface';
   `
 })
 export class StockItemsComponent {
-  @Input() parent: FormGroup;
+  @Input() parent: UntypedFormGroup;
   @Input() map: Map<number, Product>;
   @Output() removed = new EventEmitter<any>();
 
@@ -54,6 +54,6 @@ export class StockItemsComponent {
   }
 
   get items() {
-    return (this.parent.get('items') as FormArray).controls;
+    return (this.parent.get('items') as UntypedFormArray).controls;
   }
 }
